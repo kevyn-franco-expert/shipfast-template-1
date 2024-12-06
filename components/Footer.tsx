@@ -57,9 +57,6 @@ const Footer = () => {
                 <Link href="/#pricing" className="link link-hover">
                   Pricing
                 </Link>
-                <a href="/#" target="_blank" className="link link-hover">
-                  Affiliates
-                </a>
               </div>
             </div>
 
@@ -78,6 +75,23 @@ const Footer = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Product Hunt Badge */}
+        <div className="mt-10 text-center">
+          <a
+            href="https://www.producthunt.com/posts/job-hunter-1?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-job&#0045;hunter&#0045;1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=678996&theme=light"
+              alt="Job&#0032;Hunter - JobHunter&#0058;&#0032;Find&#0032;jobs&#0044;&#0032;streamline&#0032;search&#0044;&#0032;craft&#0032;custom&#0032;CVs | Product Hunt"
+              style={{ width: "250px", height: "54px" }}
+              width="250"
+              height="54"
+            />
+          </a>
         </div>
       </div>
     </footer>

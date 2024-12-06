@@ -25,6 +25,7 @@ import config from "@/config";
 
 // Please write a simple privacy policy for my site. Add the current date.  Do not add or explain your reasoning. Answer:
 
+// @ts-ignore
 export const metadata = getSEOTags({
   title: `Privacy Policy | ${config.appName}`,
   canonicalUrlRelative: "/privacy-policy",
@@ -57,9 +58,9 @@ const PrivacyPolicy = () => {
           className="leading-relaxed whitespace-pre-wrap"
           style={{ fontFamily: "sans-serif" }}
         >
-          {`Last Updated: 2023-08-25
+          {`Last Updated: December 1, 2024
 
-Thank you for visiting ShipFast ("we," "us," or "our"). This Privacy Policy outlines how we collect, use, and protect your personal and non-personal information when you use our website located at https://shipfa.st (the "Website").
+Thank you for visiting JobHunter (“we,” “us,” or “our”). This Privacy Policy outlines how we collect, use, and protect your personal and non-personal information when you use our website located at https://jobhunter.com (the “Website”).
 
 By accessing or using the Website, you agree to the terms of this Privacy Policy. If you do not agree with the practices described in this policy, please do not use the Website.
 
@@ -68,26 +69,29 @@ By accessing or using the Website, you agree to the terms of this Privacy Policy
 1.1 Personal Data
 
 We collect the following personal information from you:
-
-Name: We collect your name to personalize your experience and communicate with you effectively.
-Email: We collect your email address to send you important information regarding your orders, updates, and communication.
-Payment Information: We collect payment details to process your orders securely. However, we do not store your payment information on our servers. Payments are processed by trusted third-party payment processors.
+\t•\tName: We collect your name to personalize your experience and communicate with you effectively.
+\t•\tEmail: We collect your email address to send you important information regarding job opportunities, updates, and communication.
+\t•\tPayment Information: We collect payment details to process your subscriptions or premium services securely. However, we do not store your payment information on our servers. Payments are processed by trusted third-party payment processors.
 
 1.2 Non-Personal Data
 
-We may use web cookies and similar technologies to collect non-personal information such as your IP address, browser type, device information, and browsing patterns. This information helps us to enhance your browsing experience, analyze trends, and improve our services.
+We may use web cookies and similar technologies to collect non-personal information such as your IP address, browser type, device information, and browsing patterns. This information helps us enhance your browsing experience, analyze trends, and improve our services.
 
 2. Purpose of Data Collection
 
-We collect and use your personal data for the sole purpose of order processing. This includes processing your orders, sending order confirmations, providing customer support, and keeping you updated about the status of your orders.
+We collect and use your personal data for the following purposes:
+\t•\tTo provide and improve our services, including personalized job recommendations.
+\t•\tTo communicate with you regarding job opportunities, new features, and updates.
+\t•\tTo process payments for premium services and subscriptions.
+\t•\tTo offer customer support and respond to inquiries.
 
 3. Data Sharing
 
-We do not share your personal data with any third parties except as required for order processing (e.g., sharing your information with payment processors). We do not sell, trade, or rent your personal information to others.
+We do not share your personal data with any third parties except as required for providing our services, such as sharing information with payment processors or partners for job matching. We do not sell, trade, or rent your personal information to others.
 
-4. Children's Privacy
+4. Children’s Privacy
 
-ShipFast is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us at the email address provided below.
+JobHunter is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us at the email address provided below.
 
 5. Updates to the Privacy Policy
 
@@ -97,11 +101,11 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 
 If you have any questions, concerns, or requests related to this Privacy Policy, you can contact us at:
 
-Email: marc@shipfa.st
+Email: contact@jobhunter.com
 
 For all other inquiries, please visit our Contact Us page on the Website.
 
-By using ShipFast, you consent to the terms of this Privacy Policy.`}
+By using JobHunter, you consent to the terms of this Privacy Policy.`}
         </pre>
       </div>
     </main>

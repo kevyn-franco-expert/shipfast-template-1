@@ -13,22 +13,63 @@ interface FAQItemProps {
 
 const faqList: FAQItemProps[] = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
+    question: "What does JobHunter help me with?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        JobHunter helps you find the best job listings in your sector, across
+        multiple platforms. You can easily create a tailored CV and optimize your
+        job search to get the best opportunities in less time.
+      </div>
+    ),
   },
   {
-    question: "Can I get a refund?",
+    question: "Can I cancel my subscription?",
     answer: (
       <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
+        Yes! You can cancel your subscription at any time. Simply go to your
+        account settings and follow the cancellation process.
       </p>
     ),
   },
   {
-    question: "I have another question",
+    question: "How can I contact support?",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <div className="space-y-2 leading-relaxed">
+        For any support inquiries, feel free to reach out via email, and our team
+        will assist you as soon as possible.
+      </div>
+    ),
+  },
+  {
+    question: "Can I use JobHunter for free?",
+    answer: (
+      <p>
+        Unfortunately, JobHunter is a paid service. From the moment you sign up, you'll start receiving alerts for job opportunities, including automatic job applications where your profile is automatically matched with relevant opportunities.
+      </p>
+    ),
+  },
+  {
+    question: "How does JobHunter's automatic application feature work?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        JobHunter automatically applies to job listings that match your profile. By analyzing your skills, experience, and preferences, we ensure that your application is sent to the best opportunities without any extra effort from you.
+      </div>
+    ),
+  },
+  {
+    question: "How often do I receive alerts about job opportunities?",
+    answer: (
+      <p>
+        Alerts are sent whenever a new job listing that matches your profile becomes available. You will be notified immediately to ensure you never miss out on an opportunity.
+      </p>
+    ),
+  },
+  {
+    question: "Can I customize the types of jobs I get alerts for?",
+    answer: (
+      <p>
+        Yes! You can customize the types of job opportunities you are interested in by adjusting your preferences in the account settings. This allows you to receive only the most relevant job alerts.
+      </p>
     ),
   },
 ];

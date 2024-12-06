@@ -57,39 +57,44 @@ const TOS = () => {
           className="leading-relaxed whitespace-pre-wrap"
           style={{ fontFamily: "sans-serif" }}
         >
-          {`Last Updated: September 26, 2023
+          {`Last Updated: December 1, 2024
 
-Welcome to ShipFast!
+Welcome to JobHunter!
 
-These Terms of Service ("Terms") govern your use of the ShipFast website at https://shipfa.st ("Website") and the services provided by ShipFast. By using our Website and services, you agree to these Terms.
+These Terms of Service (“Terms”) govern your use of the JobHunter website at https://jobhunter.ai (“Website”) and the services provided by JobHunter. By accessing or using our Website and Services, you agree to comply with these Terms. If you do not agree with these Terms, please refrain from using our Website and Services.
 
-1. Description of ShipFast
+1. Description of JobHunter
 
-ShipFast is a platform that offers a JavaScript code boilerplate to assist entrepreneurs in launching their startups more efficiently.
+JobHunter is a platform designed to assist job seekers in finding the best job listings by aggregating opportunities from multiple platforms. It allows users to create tailored CVs from their pre-uploaded data and optimize their job search experience. JobHunter aims to simplify and accelerate the job search process by offering efficient tools and personalized recommendations.
 
 2. Ownership and Usage Rights
 
-When you purchase a package from ShipFast, you gain the right to download and use the code provided for creating applications. You own the code you create but do not have the right to resell it. We offer a full refund within 7 days of purchase, as specified in our refund policy.
+When you create an account or use JobHunter’s services, you are granted the right to use the features and tools provided to optimize your job search. You retain ownership of your personal data, including your CV, profile information, and any other content you upload to the Website. However, you do not have the right to resell or distribute the content provided by JobHunter without explicit authorization.
+
+We offer a full refund within 7 days of purchase for any paid services or premium features, as outlined in our refund policy.
 
 3. User Data and Privacy
 
-We collect and store user data, including name, email, and payment information, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at https://shipfa.st/privacy-policy.
+We collect and store user data, including your name, email address, and other personal information, as necessary to provide our services. This data is used to enhance your experience on the platform, such as matching you with relevant job opportunities. For detailed information on how we handle your data, please review our Privacy Policy.
 
 4. Non-Personal Data Collection
 
-We use web cookies to collect non-personal data for the purpose of improving our services and user experience.
+JobHunter uses web cookies and similar tracking technologies to collect non-personal data, such as usage patterns, browsing behavior, and device information. This data is used solely to improve our services and enhance the user experience.
 
 5. Governing Law
 
-These Terms are governed by the laws of France.
+These Terms are governed by the laws of the jurisdiction in which JobHunter operates, as specified in our Terms of Service. Any disputes arising from or related to these Terms will be resolved under these laws.
 
 6. Updates to the Terms
 
-We may update these Terms from time to time. Users will be notified of any changes via email.
+JobHunter reserves the right to update or modify these Terms at any time. Users will be notified of any significant changes via email or through our Website. Continued use of the Website or Services after any updates constitutes acceptance of the revised Terms.
 
-For any questions or concerns regarding these Terms of Service, please contact us at marc@shipfa.st.
+7. Contact Information
 
-Thank you for using ShipFast!`}
+For any questions or concerns regarding these Terms of Service, please contact us at contact@jobhunter.ai.
+
+Thank you for using JobHunter!
+          `}
         </pre>
       </div>
     </main>
