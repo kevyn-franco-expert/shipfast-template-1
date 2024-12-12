@@ -319,16 +319,12 @@ import configFile from "@/config";
 import {findCheckoutSession} from "@/libs/stripe";
 import {createClientComponentClient} from "@supabase/auth-helpers-nextjs";
 
+export const dynamic = 'force-dynamic';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
     apiVersion: "2023-08-16",
     typescript: true,
 });
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
 
 async function readableStreamToBuffer(readableStream: ReadableStream): Promise<Buffer> {
     const reader = readableStream.getReader();
