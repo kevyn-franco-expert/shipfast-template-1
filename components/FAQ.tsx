@@ -3,8 +3,8 @@
 import { useRef, useState } from "react";
 import type { JSX } from "react";
 
-// <FAQ> component is a lsit of <Item> component
-// Just import the FAQ & add your FAQ content to the const faqList arrayy below.
+// <FAQ> component is a list of <Item> component
+// Just import the FAQ & add your FAQ content to the const faqList array below.
 
 interface FAQItemProps {
   question: string;
@@ -44,12 +44,12 @@ const faqList: FAQItemProps[] = [
     question: "Can I use JobHunter for free?",
     answer: (
       <p>
-        Unfortunately, JobHunter is a paid service. From the moment you sign up, you'll start receiving alerts for job opportunities, including automatic job applications where your profile is automatically matched with relevant opportunities.
+        Unfortunately, JobHunter is a paid service. From the moment you sign up, you&apos;ll start receiving alerts for job opportunities, including automatic job applications where your profile is automatically matched with relevant opportunities.
       </p>
     ),
   },
   {
-    question: "How does JobHunter's automatic application feature work?",
+    question: "How does JobHunter&apos;s automatic application feature work?",
     answer: (
       <div className="space-y-2 leading-relaxed">
         JobHunter automatically applies to job listings that match your profile. By analyzing your skills, experience, and preferences, we ensure that your application is sent to the best opportunities without any extra effort from you.
