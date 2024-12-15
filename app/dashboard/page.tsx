@@ -76,16 +76,16 @@ export default function Dashboard() {
     });
 
     const [applications, setApplications] = useState([
-        {
-            platform: "LinkedIn",
-            date: "March 10, 2024",
-            status: "Shared",
-        },
-        {
-            platform: "GitHub",
-            date: "March 5, 2024",
-            status: "Pending",
-        },
+        // {
+        //     platform: "LinkedIn",
+        //     date: "March 10, 2024",
+        //     status: "Shared",
+        // },
+        // {
+        //     platform: "GitHub",
+        //     date: "March 5, 2024",
+        //     status: "Pending",
+        // },
     ]);
 
     const handleSkillChange = (index: number, value: string) => {
