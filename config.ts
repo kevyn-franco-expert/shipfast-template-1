@@ -32,9 +32,7 @@ const config = {
             },
             {
                 priceId:
-                    process.env.NODE_ENV === "development"
-                        ? "price_1QTcbvDDSl6HxoiNycoHuDvN"
-                        : "price_1QTcbvDDSl6HxoiNycoHuDvN",
+                    process.env.PRICE_19,
                 isFeatured: true,
                 name: "Recommended Plan",
                 description: "The best choice for active job seekers",
@@ -44,15 +42,13 @@ const config = {
                     {name: "Job Alerts"},
                     {name: "Advanced AI CV Builder"},
                     {name: "Auto Job Apply"},
-                    {name: "Priority Support"},
+                    // {name: "Priority Support"},
                     {name: "Job Search Optimization"},
                 ],
             },
             {
                 priceId:
-                    process.env.NODE_ENV === "development"
-                        ? "prod_RMLIDY8XgQtTdA"
-                        : "prod_RMLIDY8XgQtTdA",
+                    process.env.PRICE_49,
                 name: "Ultimate Plan",
                 description: "For those looking for unlimited features and support",
                 price: 299,
