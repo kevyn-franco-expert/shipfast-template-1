@@ -781,7 +781,7 @@ export default function Dashboard() {
                                             We are working to find the best matches for you!
                                         </h3>
                                         <p className="text-gray-600">
-                                            Don't forget to upload your information so we can help you find the perfect
+                                            Don&apos;t forget to upload your information so we can help you find the perfect
                                             match.
                                         </p>
                                     </div>
