@@ -37,6 +37,16 @@ const customStyles = {
 };
 
 export default function Dashboard() {
+    const [isTrialPeriodActive, setIsTrialPeriodActive] = useState(false);
+    const calculateTrialPeriod = (createdAt: string): boolean => {
+        const creationDate = new Date(createdAt);
+        const currentDate = new Date();
+        const diffInDays = Math.ceil(
+            (currentDate.getTime() - creationDate.getTime()) / (1000 * 60 * 60 * 24)
+        );
+        return diffInDays <= 14;
+    };
+
     const countryOptions = countryList().getData();
     const [isSavingUserInfo, setIsSavingUserInfo] = useState(false);
     const [isSavingExperience, setIsSavingExperience] = useState(false);
@@ -122,6 +132,13 @@ export default function Dashboard() {
         }
 
         const user = data.session.user;
+        if (user?.user_metadata?.created_at) {
+            // Calcular si el usuario está dentro del período de prueba
+            const trialActive = calculateTrialPeriod(user.user_metadata.created_at);
+            setIsTrialPeriodActive(trialActive);
+        } else {
+            console.error("created_at field is missing in user_metadata.");
+        }
         return user;
     };
 
@@ -695,7 +712,7 @@ export default function Dashboard() {
                 {activeTab === "alerts" && (
                     <div>
                         <h2 className="text-3xl font-bold mb-6">Alerts</h2>
-                        {currentUser && !currentUser?.user_metadata?.hasPurchased ? (
+                        {currentUser && (currentUser?.user_metadata?.hasPurchased || isTrialPeriodActive) ? (
                             // Mostrar mensaje si no ha comprado
                             <div className="bg-white p-6 shadow rounded-lg text-center">
                                 <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -714,49 +731,61 @@ export default function Dashboard() {
                         ) : (
                             // Mostrar tabla de alertas si ha comprado
                             <div className="overflow-x-auto bg-white rounded-lg shadow-lg">
-                                <table className="table w-full table-auto">
-                                    <thead className="bg-primary text-white">
-                                    <tr>
-                                        <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">
-                                            Platform
-                                        </th>
-                                        <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">
-                                            Date Shared
-                                        </th>
-                                        <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">
-                                            Status
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody className="bg-gray-50">
-                                    {applications.map((app, index) => (
-                                        <tr
-                                            key={index}
-                                            className={`hover:bg-gray-100 transition-all duration-200 ${
-                                                index % 2 === 0 ? "bg-white" : "bg-gray-50"
-                                            }`}
-                                        >
-                                            <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                                                {app.platform}
-                                            </td>
-                                            <td className="px-6 py-4 text-sm text-gray-700">{app.date}</td>
-                                            <td className="px-6 py-4 text-sm text-gray-700">
-                  <span
-                      className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                          app.status === "Completed"
-                              ? "bg-green-100 text-green-800"
-                              : app.status === "Pending"
-                                  ? "bg-yellow-100 text-yellow-800"
-                                  : "bg-red-100 text-red-800"
-                      }`}
-                  >
-                    {app.status}
-                  </span>
-                                            </td>
+                                {applications.length > 0 ? (
+                                    <table className="table w-full table-auto">
+                                        <thead className="bg-primary text-white">
+                                        <tr>
+                                            <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">
+                                                Platform
+                                            </th>
+                                            <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">
+                                                Date Shared
+                                            </th>
+                                            <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">
+                                                Status
+                                            </th>
                                         </tr>
-                                    ))}
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody className="bg-gray-50">
+                                        {applications.map((app, index) => (
+                                            <tr
+                                                key={index}
+                                                className={`hover:bg-gray-100 transition-all duration-200 ${
+                                                    index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                                                }`}
+                                            >
+                                                <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                                                    {app.platform}
+                                                </td>
+                                                <td className="px-6 py-4 text-sm text-gray-700">{app.date}</td>
+                                                <td className="px-6 py-4 text-sm text-gray-700">
+                            <span
+                                className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
+                                    app.status === "Completed"
+                                        ? "bg-green-100 text-green-800"
+                                        : app.status === "Pending"
+                                            ? "bg-yellow-100 text-yellow-800"
+                                            : "bg-red-100 text-red-800"
+                                }`}
+                            >
+                                {app.status}
+                            </span>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                        </tbody>
+                                    </table>
+                                ) : (
+                                    <div className="text-center py-10">
+                                        <h3 className="text-xl font-bold text-gray-800 mb-4">
+                                            We are working to find the best matches for you!
+                                        </h3>
+                                        <p className="text-gray-600">
+                                            Don't forget to upload your information so we can help you find the perfect
+                                            match.
+                                        </p>
+                                    </div>
+                                )}
                             </div>
                         )}
                     </div>

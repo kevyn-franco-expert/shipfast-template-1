@@ -9,19 +9,19 @@ const list: {
   img?: string | StaticImageData;
 }[] = [
   {
-    username: "jobhunter_user1",
+    username: "annasmith",
     name: "Anna Smith",
     text: "JobHunter helped me land my dream job in just weeks! The tailored CV features saved me so much time and helped me stand out to recruiters.",
-    img: "https://pbs.twimg.com/profile_images/1514863683574599681/9k7PqDTA_400x400.jpg",
+    // img: "https://pbs.twimg.com/profile_images/1514863683574599681/9k7PqDTA_400x400.jpg",
   },
   {
-    username: "tech_enthusiast",
-    name: "John Doe",
+    username: "lgarcia",
+    name: "Larry Garcia",
     text: "I was overwhelmed with the job search process, but JobHunter simplified everything. I received targeted job listings that matched my skills perfectly.",
   },
   {
-    username: "dev_guru",
-    name: "Sarah Lee",
+    username: "leetech",
+    name: "Dave Lee",
     text: "JobHunter streamlined my job search. The easy-to-use interface and quick CV customization helped me apply to top jobs in no time.",
   },
 ];
@@ -88,7 +88,7 @@ const Testimonials3 = () => {
         <div className="flex flex-col text-center w-full mb-20">
           <div className="mb-8">
             <h2 className="sm:text-5xl text-4xl font-extrabold text-base-content">
-              212 job seekers have found their dream jobs with JobHunter!
+              Over 200 job seekers have landed their dream jobs with JobHunter!
             </h2>
           </div>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-base-content/80">

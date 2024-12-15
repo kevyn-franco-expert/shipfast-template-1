@@ -19,14 +19,11 @@ const config = {
         // Create multiple plans in your Stripe dashboard, then add them here. You can add as many plans as you want, just make sure to add the priceId
         plans: [
             {
-                priceId:
-                    process.env.NODE_ENV === "development"
-                        ? "price_1QTcbvDDSl6HxoiNycoHuDvN"
-                        : "price_1QTcbvDDSl6HxoiNycoHuDvN",
+                priceId: "free_trial",
                 name: "Starter Plan",
-                description: "For those just starting their job search",
-                price: 19,
-                priceAnchor: 29,
+                description: "14-day free trial to kickstart your job search",
+                price: 0,
+                priceAnchor: 19,
                 features: [
                     {name: "Job Alerts"},
                     {name: "AI CV Builder"},
@@ -40,9 +37,9 @@ const config = {
                         : "price_1QTcbvDDSl6HxoiNycoHuDvN",
                 isFeatured: true,
                 name: "Recommended Plan",
-                description: "The most popular choice for active job seekers",
-                price: 49,
-                priceAnchor: 69,
+                description: "The best choice for active job seekers",
+                price: 19,
+                priceAnchor: 49,
                 features: [
                     {name: "Job Alerts"},
                     {name: "Advanced AI CV Builder"},
@@ -79,9 +76,12 @@ const config = {
     mailgun: {
         subdomain: "mg",
         fromNoReply: `JobHunter <noreply@mg.jobhunter.com>`,
-        fromAdmin: `JobHunter Support <support@mg.jobhunter.com>`,
-        supportEmail: "support@mg.jobhunter.com",
-        forwardRepliesTo: "support@jobhunter.com",
+        // fromAdmin: `JobHunter Support <support@mg.jobhunter.com>`,
+        fromAdmin: `JobHunter Support <kevyn@franco.expert>`,
+        // supportEmail: "support@mg.jobhunter.com",
+        supportEmail: "kevyn@franco.expert",
+        // forwardRepliesTo: "support@jobhunter.com",
+        forwardRepliesTo: "kevyn@franco.expert",
     },
     colors: {
         theme: "light",

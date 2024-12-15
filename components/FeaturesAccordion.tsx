@@ -18,23 +18,23 @@ const features = [
         description:
             "Find job listings across multiple platforms in one place, saving time by eliminating the need to browse multiple websites.",
         type: "video",
-        path: "https://d3m8mk7e1mf7xn.cloudfront.net/app/newsletter.webm",
+        path: "https://websitevieo.s3.us-east-1.amazonaws.com/jobsearch-jobalers-remotejobs.webm",
         format: "video/webm",
     },
     {
         title: "Resume Builder",
         description:
             "Automatically generate a tailored CV based on your pre-uploaded data. Quickly create customized resumes for each job application.",
-        type: "image",
-        path: "https://images.unsplash.com/photo-1568775972-68d0b6590416?fit=crop&w=500&h=500&q=80",
-        alt: "A resume builder",
+        type: "video",
+        path: "https://websitevieo.s3.us-east-1.amazonaws.com/resumen-builder.webm",
+        format: "video/webm",
     },
     {
         title: "Job Alerts",
         description:
             "Receive instant notifications about new job opportunities in your sector, ensuring you never miss out on the best jobs.",
         type: "video",
-        path: "https://d3m8mk7e1mf7xn.cloudfront.net/app/newsletter.webm",
+        path: "https://websitevieo.s3.us-east-1.amazonaws.com/jobsearch-jobalers-remotejobs.webm",
         format: "video/webm",
     },
     {
@@ -42,7 +42,7 @@ const features = [
         description:
             "Find remote work opportunities with the flexibility to work from anywhere, optimizing your search for the best remote roles.",
         type: "video",
-        path: "https://d3m8mk7e1mf7xn.cloudfront.net/app/newsletter.webm",
+        path: "https://websitevieo.s3.us-east-1.amazonaws.com/jobsearch-jobalers-remotejobs.webm",
         format: "video/webm",
     },
 ] as Feature[];
