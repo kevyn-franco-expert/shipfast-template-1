@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import {Suspense} from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -13,8 +13,8 @@ import Footer from "@/components/Footer";
 export default function Home() {
     return (
         <>
-            {/* Add Google Tag Manager Script */}
             <Head>
+                {/* Add Google Tag Manager Script */}
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
@@ -34,6 +34,19 @@ export default function Home() {
                             },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
                             a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
                             twq('config','ov3qk');
+                        `,
+                    }}
+                />
+                {/* Google Tag Script */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BFHQZ2667"></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+
+                            gtag('config', 'G-2BFHQZ2667');
                         `,
                     }}
                 />
@@ -57,10 +70,10 @@ export default function Home() {
                 <WithWithout/>
                 <FeaturesAccordion/>
                 <Pricing/>
-                <Testimonials3 />
-                <FAQ />
+                <Testimonials3/>
+                <FAQ/>
             </main>
-            <Footer />
+            <Footer/>
         </>
     );
 }
